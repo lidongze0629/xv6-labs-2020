@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 
   if(pipe(p) < 0) {
     fprintf(2, "system call pipe error");
+    exit(1);
   }
 
   if(fork() == 0) {
